@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gold Price Converter</h1>
+        <label for="gold-price">Enter International Gold Price (USD per ounce):</label>
+        <input type="number" id="gold-price" placeholder="Enter price in USD" />
+        <button onclick="convertPrice()">Convert to INR</button>
+        
+        <!-- Section for displaying exchange rate -->
+        <div id="exchange-rate-section">
+            <p><strong>Current USD to INR exchange rate: </strong><span id="exchange-rate">Fetching...</span></p>
+        </div>
+
+        <!-- Section to display constants -->
+        <div id="constants-section">
+            <p><strong>Ounce to Grams Conversion:</strong> <span id="ounce-to-grams">31.1035</span></p>
+            <p><strong>Import Duty Tax:</strong> <span id="import-duty-tax">1.06</span></p>
+            <p><strong>GST Tax:</strong> <span id="gst-tax">1.03</span></p>
+        </div>
+
+        <!-- Section for showing result -->
+        <div id="result">
+            <h2>Converted Price in INR per gram:</h2>
+            <p id="price-inr-without-gst" class="highlighted-price">Price without GST: ₹ 0.00</p>
+            <p id="price-inr-with-gst" class="highlighted-price">Price with GST: ₹ 0.00</p>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
